@@ -1,0 +1,71 @@
+10016	IGNORE	# Web Browser XSS Protection Not Enabled
+10020	IGNORE	# X-Frame-Options Header
+10021	IGNORE	# X-Content-Type-Options Header Missing
+10036	IGNORE	# Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)
+10098	IGNORE	# Content Security Policy (CSP) Header Not Set
+10109	IGNORE	# Application Error Disclosure
+10129	IGNORE	# Missing Anti-clickjacking Header
+10135	IGNORE	# Strict-Transport-Security Header
+10138	IGNORE	# Content Security Policy (CSP) Header
+10139	IGNORE	# X-Content-Type-Options Header
+10140	IGNORE	# X-Frame-Options Header
+10141	IGNORE	# X-XSS-Protection Header
+10142	IGNORE	# Referrer-Policy Header
+10143	IGNORE	# Permissions-Policy Header
+10144	IGNORE	# Cross-Origin-Embedder-Policy Header
+10145	IGNORE	# Cross-Origin-Opener-Policy Header
+10146	IGNORE	# Cross-Origin-Resource-Policy Header
+10147	IGNORE	# Clear-Site-Data Header
+10148	IGNORE	# Feature-Policy Header
+10149	IGNORE	# Public-Key-Pins Header
+10150	IGNORE	# X-Download-Options Header
+10151	IGNORE	# X-Permitted-Cross-Domain-Policies Header
+10152	IGNORE	# X-Robots-Tag Header
+10153	IGNORE	# X-Runtime Header
+10154	IGNORE	# X-Version Header
+10155	IGNORE	# X-WebKit-CSP Header
+10156	IGNORE	# X-WebKit-CSP-Report-Only Header
+10157	IGNORE	# X-WebKit-CSP-Report-Only Header
+10158	IGNORE	# X-WebKit-CSP-Report-Only Header
+10159	IGNORE	# X-WebKit-CSP-Report-Only Header
+10160	IGNORE	# X-WebKit-CSP-Report-Only Header
+10161	IGNORE	# X-WebKit-CSP-Report-Only Header
+10162	IGNORE	# X-WebKit-CSP-Report-Only Header
+10163	IGNORE	# X-WebKit-CSP-Report-Only Header
+10164	IGNORE	# X-WebKit-CSP-Report-Only Header
+10165	IGNORE	# X-WebKit-CSP-Report-Only Header
+10166	IGNORE	# X-WebKit-CSP-Report-Only Header
+10167	IGNORE	# X-WebKit-CSP-Report-Only Header
+10168	IGNORE	# X-WebKit-CSP-Report-Only Header
+10169	IGNORE	# X-WebKit-CSP-Report-Only Header
+10170	IGNORE	# X-WebKit-CSP-Report-Only Header
+10171	IGNORE	# X-WebKit-CSP-Report-Only Header
+10172	IGNORE	# X-WebKit-CSP-Report-Only Header
+10173	IGNORE	# X-WebKit-CSP-Report-Only Header
+10174	IGNORE	# X-WebKit-CSP-Report-Only Header
+10175	IGNORE	# X-WebKit-CSP-Report-Only Header
+10176	IGNORE	# X-WebKit-CSP-Report-Only Header
+10177	IGNORE	# X-WebKit-CSP-Report-Only Header
+10178	IGNORE	# X-WebKit-CSP-Report-Only Header
+10179	IGNORE	# X-WebKit-CSP-Report-Only Header
+10180	IGNORE	# X-WebKit-CSP-Report-Only Header
+10181	IGNORE	# X-WebKit-CSP-Report-Only Header
+10182	IGNORE	# X-WebKit-CSP-Report-Only Header
+10183	IGNORE	# X-WebKit-CSP-Report-Only Header
+10184	IGNORE	# X-WebKit-CSP-Report-Only Header
+10185	IGNORE	# X-WebKit-CSP-Report-Only Header
+10186	IGNORE	# X-WebKit-CSP-Report-Only Header
+10187	IGNORE	# X-WebKit-CSP-Report-Only Header
+10188	IGNORE	# X-WebKit-CSP-Report-Only Header
+10189	IGNORE	# X-WebKit-CSP-Report-Only Header
+10190	IGNORE	# X-WebKit-CSP-Report-Only Header
+10191	IGNORE	# X-WebKit-CSP-Report-Only Header
+10192	IGNORE	# X-WebKit-CSP-Report-Only Header
+10193	IGNORE	# X-WebKit-CSP-Report-Only Header
+10194	IGNORE	# X-WebKit-CSP-Report-Only Header
+10195	IGNORE	# X-WebKit-CSP-Report-Only Header
+10196	IGNORE	# X-WebKit-CSP-Report-Only Header
+10197	IGNORE	# X-WebKit-CSP-Report-Only Header
+10198	IGNORE	# X-WebKit-CSP-Report-Only Header
+10199	IGNORE	# X-WebKit-CSP-Report-Only Header
+10200	IGNORE	# X-WebKit-CSP-Report-Only Header 

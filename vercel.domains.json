@@ -1,0 +1,59 @@
+{
+  "domains": [
+    {
+      "name": "portfolio-g8.com",
+      "type": "apex",
+      "verification": {
+        "type": "dns",
+        "domain": "portfolio-g8.com",
+        "value": "vercel-dns-verification"
+      }
+    },
+    {
+      "name": "www.portfolio-g8.com",
+      "type": "www",
+      "redirect": {
+        "source": "www.portfolio-g8.com",
+        "destination": "portfolio-g8.com",
+        "permanent": true
+      }
+    }
+  ],
+  "ssl": {
+    "type": "vercel",
+    "minimumTLSVersion": "1.2",
+    "hsts": {
+      "enabled": true,
+      "maxAge": 31536000,
+      "includeSubDomains": true,
+      "preload": true
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ]
+} 

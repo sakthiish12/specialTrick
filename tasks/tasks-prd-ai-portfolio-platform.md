@@ -1,0 +1,139 @@
+## Relevant Files
+
+- `app/api/ai/route.ts` - Main AI assistant API endpoint with function calling and vector search (UPDATED)
+- `app/api/ai/route.test.ts` - Unit tests for AI assistant API
+- `app/api/github/route.ts` - GitHub API integration for fetching repositories and stats
+- `app/api/github/route.test.ts` - Unit tests for GitHub API integration
+- `app/api/embeddings/route.ts` - Vector embeddings generation and storage API
+- `app/api/embeddings/route.test.ts` - Unit tests for embeddings API
+- `app/api/webhooks/github/route.ts` - GitHub webhook handler for real-time updates (CREATED & UPDATED)
+- `app/api/webhooks/github/route.test.ts` - Unit tests for webhook handler
+- `app/projects/page.tsx` - Live GitHub projects showcase page
+- `app/projects/[slug]/page.tsx` - Individual project detail pages
+- `app/blog/page.tsx` - Blog listing page with search and filtering
+- `app/blog/[slug]/page.tsx` - Individual blog post pages
+- `app/tags/[tag]/page.tsx` - Tag-based blog post filtering pages
+- `components/ai/advanced-chatbot.tsx` - Enhanced AI assistant component with function calling
+- `components/ai/advanced-chatbot.test.tsx` - Unit tests for AI chatbot component
+- `components/projects/github-projects-grid.tsx` - Grid component for displaying GitHub projects
+- `components/projects/project-card.tsx` - Individual project card component with animations
+- `components/projects/project-filters.tsx` - Search and filter components for projects
+- `components/blog/blog-post-list.tsx` - Blog post listing component
+- `components/blog/blog-search.tsx` - Client-side blog search component
+- `components/visualizations/github-analytics.tsx` - GitHub data visualization components
+- `components/visualizations/contribution-heatmap.tsx` - GitHub contribution heatmap
+- `components/visualizations/language-chart.tsx` - Programming language breakdown chart
+- `lib/ai/embeddings.ts` - Vector embeddings utilities and search functions (UPDATED with deleteDocumentByPath)
+- `lib/ai/embeddings.test.ts` - Unit tests for embeddings utilities
+- `lib/ai/document-processor.ts` - Utility for processing documents and generating embeddings (UPDATED with exported chunkText, getDocumentMetadata)
+- `lib/ai/function-calling.ts` - AI function calling implementation
+- `lib/ai/function-calling.test.ts` - Unit tests for function calling
+- `lib/ai/session.ts` - Session management and user preferences (CREATED)
+- `lib/ai/session.test.ts` - Unit tests for session management (CREATED)
+- `lib/github/api.ts` - GitHub API client and utilities
+- `lib/github/api.test.ts` - Unit tests for GitHub API utilities
+- `lib/blog/mdx.ts` - MDX processing and blog post utilities
+- `lib/blog/mdx.test.ts` - Unit tests for MDX utilities
+- `lib/blog/search.ts` - Blog search indexing with Lunr.js
+- `lib/blog/search.test.ts` - Unit tests for blog search
+- `lib/cache/kv.ts` - Vercel KV caching utilities
+- `lib/cache/kv.test.ts` - Unit tests for caching utilities
+- `lib/supabase/client.ts` - Supabase client configuration for browser (CREATED)
+- `lib/supabase/server.ts` - Supabase server client configuration (CREATED)
+- `lib/supabase/types.ts` - TypeScript types for vector database (CREATED)
+- `lib/supabase/migrations/001_vector_database.sql` - SQL migration for vector database schema (CREATED)
+- `posts/` - Directory for markdown blog posts
+- `public/data/` - Directory for cached GitHub data and search indices
+- `docs/vector-database-setup.md` - Documentation for vector database setup (CREATED)
+- `scripts/test-db-connection.ts` - Test script to verify Supabase connection (CREATED)
+- `app/api/chat/route.ts` - AI Chatbot API route (NOW MERGED with app/api/ai/route.ts and UPDATED for similarity search)
+
+### Notes
+
+- Unit tests should typically be placed alongside the code files they are testing (e.g., `MyComponent.tsx` and `MyComponent.test.tsx` in the same directory).
+- Use `npx jest [optional/path/to/test/file]` to run tests. Running without a path executes all tests found by the Jest configuration.
+- The project uses Next.js App Router, so API routes are in `app/api/` directory.
+- Vector embeddings will be stored in Supabase Vector or Vercel KV depending on final architecture decision.
+
+## Tasks
+
+- [ ] 1.0 Advanced AI Assistant Implementation
+  - [x] 1.1 Set up vector database infrastructure (Supabase Vector or Vercel KV + Pinecone-compatible library)
+  - [x] 1.2 Create embeddings generation system for README files, source code, and documentation
+  - [x] 1.3 Implement similarity search functionality for contextual code understanding
+  - [x] 1.4 Build GitHub webhook handler for automatic re-indexing of changed files
+  - [x] 1.5 Create multi-modal knowledge base that ingests both blog articles and code documentation
+  - [x] 1.6 Implement document tagging system ("blog", "project X", "tutorial") for contextual retrieval
+  - [x] 1.7 Build OpenAI function calling system with `getGitHubStats()`, `searchBlog(tag)`, and `createIssue()` functions
+  - [x] 1.8 Implement session-based personalization and memory for user preferences
+  - [x] 1.9 Create advanced chatbot component with function calling capabilities
+  - [x] 1.10 Replace existing simple chatbot with new AI assistant in main layout
+  - [x] 1.11 Add comprehensive error handling and fallback responses
+  - [x] 1.12 Write unit tests for all AI assistant components and utilities
+- [ ] 2.0 Live GitHub Projects Integration
+  - [x] 2.1 Create GitHub API client with authentication and rate limiting
+  - [x] 2.2 Implement serverless Edge Functions for fetching repository data
+  - [x] 2.3 Build caching system using Vercel KV with 10-minute TTL
+  - [x] 2.4 Create GitHub GraphQL integration for contribution statistics and advanced data
+  - [x] 2.5 Implement topic-based filtering and sorting for repositories
+  - [x] 2.6 Build project card component with repo details, stats, and README excerpts
+  - [x] 2.7 Create search functionality across project names, descriptions, and topics
+  - [x] 2.8 Implement filter dropdowns for programming languages and topic tags
+  - [x] 2.9 Build projects grid layout with responsive design
+  - [x] 2.10 Create individual project detail pages with dynamic routing
+  - [x] 2.11 Implement Next.js ISR for automatic project list regeneration
+  - [x] 2.12 Add loading states and error handling for GitHub API failures
+  - [x] 2.13 Write unit tests for GitHub API utilities and components
+- [ ] 3.0 Git-First Blog System Development
+  - [x] 3.1 Set up MDX configuration and plugin for Next.js
+  - [x] 3.2 Create blog post directory structure
+  - [x] 3.3 Implement blog post listing page
+  - [x] 3.4 Create blog post detail page
+  - [x] 3.5 Create individual blog post pages with MDX rendering
+  - [x] 3.6 Implement tag collection system and generate tag-based filter pages
+  - [x] 3.7 Build client-side search using Lunr.js with precomputed index
+  - [x] 3.8 Create blog search component with real-time filtering
+  - [x] 3.9 Implement tag-based navigation and filtering
+  - [x] 3.10 Set up GitHub PR-based content workflow and preview functionality
+  - [x] 3.11 Create blog post metadata and SEO optimization
+  - [x] 3.12 Add responsive design for blog layouts and typography
+  - [x] 3.13 Write unit tests for MDX processing and blog utilities
+- [ ] 4.0 Interactive Data Visualizations
+  - [x] 4.1 Integrate Recharts library for data visualization components
+  - [x] 4.2 Build GitHub contribution heatmap using contribution data
+  - [x] 4.3 Create language breakdown pie/bar charts using repository statistics
+  - [x] 4.4 Implement commits over time line chart with time series data
+  - [x] 4.5 Build interactive AI demo widgets powered by the assistant
+  - [x] 4.6 Create "Try it Live" panels for sample project interactions
+  - [x] 4.7 Implement real-time GitHub statistics dashboard
+  - [x] 4.8 Add hover effects and animations to visualization components
+  - [x] 4.9 Create AI-driven project overview generation from README and code comments
+  - [x] 4.10 Implement responsive design for all visualization components
+  - [x] 4.11 Add loading states and error handling for data visualization failures
+  - [x] 4.12 Write unit tests for visualization components and data processing
+- [ ] 5.0 Enhanced UI/UX and Performance Optimization
+  - [x] 5.1 Implement mobile-first responsive design using Tailwind CSS grid system
+  - [x] 5.2 Add Framer Motion animations for smooth page transitions and component interactions
+  - [x] 5.3 Create sticky contact CTAs at top and bottom of pages
+  - [x] 5.4 Optimize content hierarchy and layout for mobile viewing
+  - [x] 5.5 Implement lazy loading for images and heavy components
+  - [x] 5.6 Add hover effects and microinteractions on project tiles and buttons
+  - [x] 5.7 Optimize performance by hiding non-essential visuals on extra-small screens
+  - [x] 5.8 Implement efficient caching strategy for all API calls and generated content
+  - [x] 5.9 Add comprehensive error boundaries and loading states throughout the application
+  - [x] 5.10 Ensure WCAG 2.1 accessibility compliance across all components
+  - [x] 5.11 Optimize Core Web Vitals scores and page load performance
+  - [x] 5.12 Add comprehensive end-to-end testing for critical user journeys
+- [ ] 6.0 Deployment and DevOps
+  - [x] 6.1 Set up Vercel deployment configuration
+  - [x] 6.2 Configure GitHub Actions for CI/CD pipeline
+  - [x] 6.3 Set up environment variables and secrets management
+  - [x] 6.4 Implement automated testing in CI pipeline
+  - [x] 6.5 Configure production monitoring and error tracking
+  - [x] 6.6 Set up performance monitoring and analytics
+  - [x] 6.7 Implement automated backups for database and content
+  - [x] 6.8 Create deployment documentation and runbooks
+  - [x] 6.9 Set up staging environment for pre-production testing
+  - [x] 6.10 Configure domain and SSL certificate
+  - [x] 6.11 Implement automated security scanning
+  - [x] 6.12 Set up logging and alerting system 
