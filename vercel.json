@@ -7,25 +7,39 @@
   "regions": ["iad1"],
   "ignoreCommand": "exit 0",
   "env": {
-    "NEXT_PUBLIC_SUPABASE_URL": "@next_public_supabase_url",
-    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "@next_public_supabase_anon_key",
+    "DATABASE_URL": "@neon_database_url",
+    "DATABASE_URL_UNPOOLED": "@neon_database_url_unpooled",
+    "PGHOST": "@neon_pghost",
+    "PGHOST_UNPOOLED": "@neon_pghost_unpooled",
+    "PGUSER": "@neon_pguser",
+    "PGDATABASE": "@neon_pgdatabase",
+    "PGPASSWORD": "@neon_pgpassword",
+    "PGPORT": "5432",
     "OPENAI_API_KEY": "@openai_api_key",
     "GITHUB_TOKEN": "@github_token",
     "NEXT_PUBLIC_VERCEL_URL": "@next_public_vercel_url",
     "SKIP_TESTS": "true",
     "SKIP_LINT": "true",
-    "SKIP_TYPE_CHECK": "true"
+    "SKIP_TYPE_CHECK": "true",
+    "NODE_ENV": "production"
   },
   "build": {
     "env": {
-      "NEXT_PUBLIC_SUPABASE_URL": "@next_public_supabase_url",
-      "NEXT_PUBLIC_SUPABASE_ANON_KEY": "@next_public_supabase_anon_key",
+      "DATABASE_URL": "@neon_database_url",
+      "DATABASE_URL_UNPOOLED": "@neon_database_url_unpooled",
+      "PGHOST": "@neon_pghost",
+      "PGHOST_UNPOOLED": "@neon_pghost_unpooled",
+      "PGUSER": "@neon_pguser",
+      "PGDATABASE": "@neon_pgdatabase",
+      "PGPASSWORD": "@neon_pgpassword",
+      "PGPORT": "5432",
       "OPENAI_API_KEY": "@openai_api_key",
       "GITHUB_TOKEN": "@github_token",
       "NEXT_PUBLIC_VERCEL_URL": "@next_public_vercel_url",
       "SKIP_TESTS": "true",
       "SKIP_LINT": "true",
-      "SKIP_TYPE_CHECK": "true"
+      "SKIP_TYPE_CHECK": "true",
+      "NODE_ENV": "production"
     }
   },
   "headers": [
